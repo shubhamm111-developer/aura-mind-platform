@@ -294,9 +294,19 @@ function toggleVoice() {
     }
 }
 
-function startVoiceRecognition() {
+async function startVoiceRecognition() {
     if (!AuraState.recognition) {
         addSystemMessage('Speech recognition is not supported in this browser.');
+        return;
+    }
+    
+    // REQUEST MICROPHONE PERMISSION FIRST
+    try {
+        await navigator.mediaDevices.getUserMedia({ audio: true });
+        console.log('Microphone permission granted');
+    } catch (error) {
+        console.error('Microphone permission denied:', error);
+        addSystemMessage('Microphone access denied. Please enable microphone permissions and try again.');
         return;
     }
     
