@@ -728,11 +728,6 @@ app.get('/aura', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`AURA Mind Backend running on port ${PORT}`);
-    // existing code
-});
-
-app.listen(PORT, () => {
     console.log(`\n🚀 AURA Mind Backend running on port ${PORT}`);
     console.log(`🤖 Primary AI API: ${AI_APIS.currentActive}`);
     console.log(`💡 Features: Voice Assistant, Document Scanning, 40-min Timer, AI Clone`);
