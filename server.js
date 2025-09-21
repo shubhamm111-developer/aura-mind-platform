@@ -48,11 +48,6 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Serve static frontend files
-app.use(express.static('.'));
-app.get('/aura', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
-
 // Real AI API Functions
 async function callGroqAPI(message) {
     try {
@@ -725,6 +720,16 @@ app.get('/api/status', (req, res) => {
         },
         timestamp: new Date().toISOString()
     });
+});
+// Serve static frontend files
+app.use(express.static('.'));
+app.get('/aura', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(PORT, () => {
+    console.log(`AURA Mind Backend running on port ${PORT}`);
+    // existing code
 });
 
 app.listen(PORT, () => {
