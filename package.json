@@ -1,6 +1,6 @@
 {
   "name": "aura-mind-backend",
-  "version": "1.0.0",
+  "version": "1.0.0", 
   "description": "AURA Mind AI Backend",
   "main": "server.js",
   "scripts": {
