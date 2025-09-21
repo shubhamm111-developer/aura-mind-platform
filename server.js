@@ -48,6 +48,8 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Serve static frontend files
+app.use(express.static('.'));
+
 // Real AI API Functions
 async function callGroqAPI(message) {
     try {
@@ -594,8 +596,13 @@ app.post('/api/scan/image', async (req, res) => {
     }
 });
 
-// Routes
+// MAIN CHANGE: Frontend Route (Root serves HTML)
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Backend API Status Route (separate endpoint)
+app.get('/api', (req, res) => {
     res.json({
         message: 'AURA Mind Backend is running!',
         features: ['Voice Assistant', 'Document Scanning', '40-min Timer', 'AI Clone', 'Safe Mode'],
@@ -721,19 +728,20 @@ app.get('/api/status', (req, res) => {
         timestamp: new Date().toISOString()
     });
 });
-// Serve static frontend files
-app.use(express.static('.'));
+
+// Additional frontend route
 app.get('/aura', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Single app.listen() - Fixed duplicate issue
 app.listen(PORT, () => {
     console.log(`\n🚀 AURA Mind Backend running on port ${PORT}`);
     console.log(`🤖 Primary AI API: ${AI_APIS.currentActive}`);
     console.log(`💡 Features: Voice Assistant, Document Scanning, 40-min Timer, AI Clone`);
     console.log(`🎤 Voice Commands: Ready for microphone/earbuds input`);
     console.log(`📸 Document Scanner: Camera and file upload ready`);
-    console.log(`🌐 Access: http://localhost:${PORT}`);
-    console.log(`🌐 Website: http://localhost:${PORT}/aura`);
+    console.log(`🌐 Frontend: https://aura-mind-platform-production.up.railway.app/`);
+    console.log(`🌐 API Status: https://aura-mind-platform-production.up.railway.app/api`);
     console.log('\n' + '='.repeat(60));
 });
