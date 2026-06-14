@@ -230,7 +230,7 @@ npm run dev
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/shubhamm111-developer/aura-ai/issues).
+Feel free to check the [issues page](https://github.com/shubhamm111-developer).
 
 ---
 
