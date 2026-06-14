@@ -1,251 +1,249 @@
-# 🌌 AURA - Adaptive Universal Responsive Avatar
+<div align="center">
 
-> **An AI Digital Twin that remembers, learns, predicts, and grows with you.**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,13,14,15,17&height=220&section=header&text=AURA%202.0&fontSize=70&fontColor=ffffff&animation=fadeIn&desc=AI%20Unified%20Responsive%20Assistant&descAlignY=58&descSize=18" width="100%"/>
 
-AURA is not just another chatbot.
+<a href="#">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Your+AI+Companion+that+Sees%2C+Hears+%26+Feels;Multilingual+%E2%80%A2+Self-Healing+%E2%80%A2+Accessible;Built+for+Everyone%2C+Designed+to+Never+Fail" alt="Typing SVG" />
+</a>
 
-While traditional AI assistants answer questions and forget the conversation, AURA creates a persistent digital twin of the user. It continuously learns from interactions, understands goals, tracks growth, adapts its personality, and provides personalized guidance as a mentor, tutor, companion, and accessibility assistant.
+<br/>
 
-Imagine an AI that doesn't simply respond to commands—but actually understands who you are, where you're heading, and how it can help you get there.
+![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen?style=for-the-badge&logo=git&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=open-source-initiative&logoColor=white)
+![Stars](https://img.shields.io/github/stars/your-username/aura-ai?style=for-the-badge&color=yellow)
+![Last Commit](https://img.shields.io/github/last-commit/your-username/aura-ai?style=for-the-badge&color=orange)
+
+</div>
 
 ---
 
-## 🚀 Vision
+## 🌟 What is AURA?
 
-Current AI systems are built around a simple cycle:
+> **AURA (AI Unified Responsive Assistant)** is not just another chatbot.
+> It's a **living, breathing digital companion** — an animated avatar that lives on your screen, listens to you, watches your expressions, talks in *your* language, and **never goes offline**, because if one AI brain fails, another silently takes over.
 
-```text
-Question → Answer
+<div align="center">
+
+```mermaid
+flowchart LR
+    U([👤 User]) -->|Voice / Text / Camera| A[🎭 AURA Avatar]
+    A --> O{Orchestrator}
+    O -->|Primary| AI1[🤖 AI Provider 1]
+    O -.fallback.-> AI2[🤖 AI Provider 2]
+    O -.fallback.-> AI3[🤖 AI Provider 3 / Local LLM]
+    O --> E[😊 Emotion Engine]
+    E -->|Text Sentiment| O
+    E -->|Facial Expression| O
+    O --> R[🔊 Response: Voice + Animation]
+    R --> A
 ```
 
-AURA introduces a new paradigm:
-
-```text
-Observe → Remember → Learn → Predict → Guide
-```
-
-Instead of providing generic responses, AURA builds a long-term understanding of the user and adapts every interaction based on:
-
-* Goals and ambitions
-* Skills and learning progress
-* Personal interests
-* Historical conversations
-* Current context
-* Accessibility requirements
+</div>
 
 ---
 
-## 🧠 What Makes AURA Different?
+## ✨ Core Features
 
-### Digital Twin Technology
+<table>
+<tr>
+<td width="50%" valign="top">
 
-AURA creates a living digital profile that evolves over time.
+### 🎭 Animated Living Avatar
+A dynamic, expressive on-screen character that reacts in real time — idle, listening, thinking, and speaking animations bring AURA to life.
 
-Example:
+</td>
+<td width="50%" valign="top">
 
-```json
-{
-  "career_goal": "AI Engineer",
-  "skills": {
-    "Python": 85,
-    "Machine Learning": 70,
-    "DSA": 55
-  },
-  "interests": [
-    "Artificial Intelligence",
-    "Robotics"
-  ],
-  "learning_style": "Practical"
-}
-```
+### 🔄 Self-Healing AI Core
+Multi-API failover with circuit-breaker logic. If one AI provider fails or rate-limits, AURA instantly switches to the next — **zero downtime, ever.**
 
-As the user grows, AURA grows too.
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
----
+### 🌍 True Multilingual Support
+Speak in Hindi, English, or any regional language — AURA understands and replies fluently in the same language, voice and all.
 
-### Long-Term Memory
+</td>
+<td width="50%" valign="top">
 
-Unlike conventional assistants, AURA remembers:
+### ♿ Accessibility First
+**Vision Mode** narrates your entire screen for visually impaired users. **Caption Mode** provides live captions and visual alerts for hearing-impaired users.
 
-* Previous conversations
-* User goals
-* Uploaded documents
-* Study materials
-* Learning patterns
-* Career aspirations
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-This allows highly personalized responses across multiple sessions.
+### 😊 Dual Emotion Detection
+Reads your **mood from text/voice tone** AND your **facial expression via webcam** (with consent) — cross-checking both for genuinely empathetic responses.
 
----
+</td>
+<td width="50%" valign="top">
 
-### Dynamic Personas
+### 🖥️ Screen-Aware Intelligence
+AURA can "see" your screen and explain errors, summarize documents, or guide you — like having a knowledgeable friend looking over your shoulder.
 
-AURA adapts its behavior depending on the user's needs.
-
-#### 🎓 Tutor Mode
-
-* Explains concepts
-* Generates quizzes
-* Summarizes notes
-* Creates learning plans
-
-#### 💼 Mentor Mode
-
-* Career guidance
-* Skill-gap analysis
-* Placement preparation
-* Project recommendations
-
-#### 🤝 Companion Mode
-
-* Daily check-ins
-* Motivation and support
-* Reflection and journaling
-
-#### ♿ Accessibility Mode
-
-* Voice-first interaction
-* Screen narration
-* Document reading assistance
-* Multilingual communication
+</td>
+</tr>
+</table>
 
 ---
 
-## 🌍 Multilingual Intelligence
+## ⚙️ How AURA Works
 
-AURA is designed for global accessibility.
+```mermaid
+sequenceDiagram
+    participant You
+    participant Avatar as 🎭 AURA Avatar
+    participant Brain as 🧠 AI Orchestrator
+    participant API as 🌐 AI Providers
+    participant Emotion as 😊 Emotion Engine
 
-Users can interact naturally in:
-
-* English
-* Hindi
-* Hinglish
-* Regional languages
-
-The system automatically detects language, processes context, and responds in the user's preferred language.
-
----
-
-## 🔄 AI Failover Architecture
-
-Reliability is a core design principle.
-
-If one AI provider becomes unavailable, AURA automatically switches to another provider without interrupting the user experience.
-
-```text
-          AURA Core
-               │
-      ┌────────┼────────┐
-      │        │        │
-   OpenAI   Gemini   Claude
-      │        │        │
-      └────────┼────────┘
-               │
-         Best Response
-```
-
-This ensures uninterrupted assistance and high system availability.
-
----
-
-## 📈 Predictive Intelligence
-
-AURA doesn't just answer questions.
-
-It predicts future needs.
-
-Examples:
-
-* Placement readiness prediction
-* Skill development forecasting
-* Productivity trend analysis
-* Personalized study recommendations
-* Goal achievement tracking
-
----
-
-## 🏗️ System Architecture
-
-```text
-User
- │
- ▼
-Multimodal Input Layer
-(Text • Voice • Documents)
-
- │
- ▼
-Context Engine
-(Language Detection • User Profile • Memory)
-
- │
- ▼
-Digital Twin Engine
-
- │
- ▼
-AI Provider Router
-
- │
- ▼
-Prediction Engine
-
- │
- ▼
-Response Generator
-
- │
- ▼
-Avatar • Voice • Text Output
+    You->>Avatar: 🎤 Speak (any language)
+    Avatar->>Brain: Send transcribed query
+    You->>Emotion: 📷 Webcam + voice tone
+    Emotion->>Brain: Mood signal (stressed/happy/neutral)
+    Brain->>API: Query Provider #1
+    API--xBrain: ❌ Timeout / Rate-limited
+    Brain->>API: Auto-switch → Provider #2 ✅
+    API->>Brain: Response generated
+    Brain->>Avatar: Tone-adjusted reply
+    Avatar->>You: 🔊 Speaks + animates expression
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ Tech Stack
 
-### Backend
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=python,fastapi,react,opencv,javascript,html,css,nodejs,docker,git&theme=dark" />
+</div>
 
-* Python
-* FastAPI
+<div align="center">
 
-### AI & NLP
+![OpenAI](https://img.shields.io/badge/OpenAI%20API-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini%20API-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=google&logoColor=white)
+![Whisper](https://img.shields.io/badge/Whisper-STT-orange?style=for-the-badge)
 
-* OpenAI API
-* Gemini API
-* LangGraph
-* Whisper
-
-### Memory & Retrieval
-
-* PostgreSQL
-* ChromaDB
-* Vector Embeddings
-* RAG Architecture
-
-### Machine Learning
-
-* Scikit-Learn
-* XGBoost
-
-### Frontend
-
-* React
-* Next.js
-
-### Deployment
-
-* Docker
-* Vercel
-* Railway
+</div>
 
 ---
 
-## 🎯 Mission
+## 🎯 Architecture Overview
 
-To build an AI that understands humans not only through their questions, but through their journey.
+```mermaid
+graph TB
+    subgraph "Frontend Layer"
+        UI[🎭 Animated Avatar UI]
+        CAM[📷 Camera Module]
+        MIC[🎤 Microphone Module]
+    end
 
-AURA is designed to become a lifelong digital companion that learns, remembers, adapts, and helps people unlock their full potential.
+    subgraph "Backend - Orchestrator"
+        ROUTER[Central Controller]
+        FAILOVER[Failover Manager]
+        LANG[Language Processor]
+        EMO[Emotion Analyzer]
+    end
+
+    subgraph "AI Provider Pool"
+        P1[OpenAI GPT]
+        P2[Gemini]
+        P3[Groq / Local LLM]
+    end
+
+    subgraph "Accessibility Layer"
+        VISION[Vision Mode - Screen Reader]
+        CAPTION[Caption Mode - Live Subtitles]
+    end
+
+    UI --> ROUTER
+    CAM --> EMO
+    MIC --> LANG
+    LANG --> ROUTER
+    EMO --> ROUTER
+    ROUTER --> FAILOVER
+    FAILOVER --> P1
+    FAILOVER -.-> P2
+    FAILOVER -.-> P3
+    ROUTER --> VISION
+    ROUTER --> CAPTION
+    ROUTER --> UI
+
+    style UI fill:#00F7FF,stroke:#000,color:#000
+    style FAILOVER fill:#FF6B6B,stroke:#000,color:#000
+    style EMO fill:#FFD93D,stroke:#000,color:#000
+```
 
 ---
 
-### "The future of AI is not smarter answers. It's deeper understanding."
+## 🚀 Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/aura-ai.git
+cd aura-ai
+
+# Install backend dependencies
+pip install -r requirements.txt
+
+# Install frontend dependencies
+cd frontend
+npm install
+
+# Run the project
+npm run dev
+```
+
+> 📝 Add your API keys (OpenAI, Gemini, Groq, etc.) in a `.env` file before running.
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Animated avatar with expression states
+- [x] Multi-API failover engine
+- [ ] Multilingual voice conversation
+- [ ] Webcam-based emotion detection
+- [ ] Screen-awareness (OCR + context reading)
+- [ ] Full Vision Mode for visually impaired users
+- [ ] Sign-language gesture responses
+
+---
+
+## 📊 Project Stats
+
+<div align="center">
+
+![GitHub repo size](https://img.shields.io/github/repo-size/your-username/aura-ai?style=for-the-badge&color=blueviolet)
+![GitHub language count](https://img.shields.io/github/languages/count/your-username/aura-ai?style=for-the-badge&color=success)
+![GitHub top language](https://img.shields.io/github/languages/top/your-username/aura-ai?style=for-the-badge&color=informational)
+
+</div>
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/shubhamm111-developer/aura-ai/issues).
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+### 💙 Built with passion to make AI accessible, reliable, and human.
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,13,14,15,17&height=120&section=footer"/>
+
+</div>
